@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visa Application Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        form {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button[type="submit"] {
+            width: auto;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            padding: 10px 20px;
+        }
+        button[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+<h2>Visa Application Form</h2>
+<form action="/index" method="post">
+    <label for="fullName">ФИО</label>
+    <input type="text" id="fullName" name="fullName" required>
+
+    <label for="passportNumber">Номер паспорта</label>
+    <input type="text" id="passportNumber" name="passportNumber" required>
+
+    <label for="dob">Дата рождения</label>
+    <input type="date" id="dob" name="dob" required>
+
+    <label for="gender">Пол</label>
+    <select id="gender" name="gender" required>
+        <option value="male">Мужской</option>
+        <option value="female">Женский</option>
+    </select>
+
+    <label for="citizenship">Гражданство</label>
+    <input type="text" id="citizenship" name="citizenship" required>
+
+    <label for="visaType">Тип визы</label>
+    <select id="visaType" name="visaType" required>
+        <option value="immigration">Иммиграционная</option>
+        <option value="non-immigration">Неиммиграционная</option>
+    </select>
+
+    <label for="destinationCountry">Страна назначения</label>
+    <input type="text" id="destinationCountry" name="destinationCountry" required>
+
+    <label for="entryDate">Дата въезда</label>
+    <input type="date" id="entryDate" name="entryDate" required>
+
+    <label for="planStayTimeMonths">Количество месяцев пребывания</label>
+    <input type="number" id="planStayTimeMonths" name="planStayTimeMonths" required>
+
+    <label for="applicationDate">Дата подачи</label>
+    <input type="date" id="applicationDate" name="applicationDate" required>
+
+    <button type="submit">Submit</button>
+</form>
+</body>
+</html>
